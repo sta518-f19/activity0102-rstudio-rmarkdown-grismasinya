@@ -69,7 +69,7 @@ ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
 circle_data %>%
   summarize(r = cor(x, y))
 ```
-The correlation coefficient is -0.06834336.
+The correlation coefficient is -0.06834336. There is not much difference between this value and the r of dino(-0.0645). 
 
 ### Exercise 5
 
