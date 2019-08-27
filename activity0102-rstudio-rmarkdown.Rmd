@@ -56,15 +56,20 @@ The correlation coefficient for star dataset is -0.0629611.
 
 ### Exercise 4
 
-(Add code and narrative as needed. Note that two R chunks are given but they are not labeled. Use the convention from above to name them appropriately.)
+#Plot y vs. x for the circle dataset:
+```{r plot-circle, fig.height=3, fig.width=6}
+circle_data <- datasaurus_dozen %>%
+  filter(dataset == "circle")
 
-```{r}
-
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
+  geom_point()
 ```
-
-```{r}
-
+#Correlation coefficient between x and y for the dataset:
+```{r cor-circle}
+circle_data %>%
+  summarize(r = cor(x, y))
 ```
+The correlation coefficient is -0.06834336.
 
 ### Exercise 5
 
